@@ -57,17 +57,14 @@ pip install -r requirements.txt
 ## 使い方
 
 ```bash
-# 1. sample.xlsx をテンプレートにサンプル帳票を5件生成(samples/ に出力)
-python3 generate_samples.py
-
-# 2. samples/ 配下の帳票を1つの集約帳票にまとめる(output/aggregate_report.xlsx に出力)
-python3 aggregate_report.py
+# samples/ 配下の帳票を1つの集約帳票にまとめる(output/aggregate_report.xlsx に出力)
+python aggregate_report.py
 ```
 
 集約対象のディレクトリや出力先を変えたい場合は引数で指定できます。
 
 ```bash
-python3 aggregate_report.py <samples_dir> <output_path>
+python aggregate_report.py <samples_dir> <output_path>
 ```
 
 ## ファイル構成
@@ -75,7 +72,6 @@ python3 aggregate_report.py <samples_dir> <output_path>
 | ファイル | 役割 |
 |---|---|
 | `sample.xlsx` | 測定結果帳票のテンプレート(単票フォーマット) |
-| `generate_samples.py` | `sample.xlsx` を元にサンプル帳票を複数生成するスクリプト |
 | `aggregate_report.py` | 複数の帳票を読み込み、1つの集約帳票にまとめるスクリプト |
 | `samples/` | 生成された(または実測定で作成された)個別帳票の格納先 |
 | `output/` | 集約帳票の出力先 |
