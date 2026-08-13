@@ -1,0 +1,9 @@
+# サンプル生成スクリプト(git管理対象外)
+generate_samples.py
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
